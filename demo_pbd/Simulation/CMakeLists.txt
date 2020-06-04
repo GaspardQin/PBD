@@ -54,7 +54,8 @@ endif()
 ############################################################
 # GenericParameters
 ############################################################
-include_directories(${GenericParameters_INCLUDE_DIR})
+add_definitions(-std=c++11)
+include_directories(${GenericParameters_INCLUDE_DIR} ${PROJECT_SOURCE_DIR})
 if(TARGET Ext_GenericParameters)
 	add_dependencies(Simulation Ext_GenericParameters)
 endif()

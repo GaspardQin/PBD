@@ -1,6 +1,6 @@
 #include "TimeStepController.h"
 #include "TimeManager.h"
-#include "../ositionBasedDynamics/PositionBasedRigidBodyDynamics.h"
+#include "../PositionBasedDynamics/PositionBasedRigidBodyDynamics.h"
 #include "../PositionBasedDynamics/TimeIntegration.h"
 #include <iostream>
 #include "../PositionBasedDynamics/PositionBasedDynamics.h"

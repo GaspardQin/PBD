@@ -1,10 +1,11 @@
+list( APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}" )
 include(GetGitRevisionDescription)
 get_git_head_revision(GIT_REFSPEC GIT_SHA1)
 git_local_changes(GIT_LOCAL_CHANGES)
 if (${GIT_LOCAL_CHANGES} STREQUAL "DIRTY")
 	set(COMPILER_MESSAGE "#pragma WARNING(Local changes not committed.)")
 endif()
-configure_file("${PROJECT_PATH}/Utils/Version.h.in" "${PROJECT_PATH}/Utils/Version.h" @ONLY)
+#configure_file("${PROJECT_PATH}/Utils/Version.h.in" "${PROJECT_PATH}/Utils/Version.h" @ONLY)
 
 add_library(Utils
 		FileSystem.h
@@ -22,7 +23,7 @@ add_library(Utils
 		TetGenLoader.cpp
 		TetGenLoader.h
 		Timing.h
-		Version.h
+		#Version.h
 		VolumeIntegration.cpp
 		VolumeIntegration.h
 
@@ -32,7 +33,8 @@ add_library(Utils
 ############################################################
 # GenericParameters
 ############################################################
-include_directories(${GenericParameters_INCLUDE_DIR})
+add_definitions(-std=c++11)
+include_directories(${GenericParameters_INCLUDE_DIR} ${PROJECT_SOURCE_DIR})
 if(TARGET Ext_GenericParameters)
 	add_dependencies(Utils Ext_GenericParameters)
 endif()

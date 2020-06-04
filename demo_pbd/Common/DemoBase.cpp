@@ -1,3 +1,4 @@
+#include <GL/glew.h>
 #include "DemoBase.h"
 #include "../Visualization/MiniGL.h"
 #include "../Utils/SceneLoader.h"
@@ -15,7 +16,7 @@
 #include "../Simulation/NumericParameter.h"
 #include "../Utils/Logger.h"
 #include "../Utils/Timing.h"
-#include "../Utils/Version.h"
+//#include "../Utils/Version.h"
 #include "../Utils/SystemInfo.h"
 #include "../Visualization/Visualization.h"
 #include "../Simulation/DistanceFieldCollisionDetection.h"

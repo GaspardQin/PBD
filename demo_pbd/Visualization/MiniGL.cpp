@@ -6,7 +6,6 @@
 #include <cstdio>
 #endif
 
-#include "GL/glew.h"
 
 #ifdef __APPLE__
 #include <OpenGL/GL.h>

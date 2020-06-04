@@ -1,6 +1,5 @@
 add_library(PositionBasedDynamics
-		 ${PROJECT_PATH}/Common/Common.h
-		
+		${PROJECT_SOURCE_DIR}/Common/Common.h
 		DirectPositionBasedSolverForStiffRodsInterface.h
 		MathFunctions.cpp
 		MathFunctions.h
@@ -20,9 +19,9 @@ add_library(PositionBasedDynamics
 		
 		CMakeLists.txt
 )
-
+add_definitions(-std=c++11)
 find_package( Eigen3 REQUIRED )
-include_directories( ${EIGEN3_INCLUDE_DIR} )
+include_directories( ${EIGEN3_INCLUDE_DIR} ${PROJECT_SOURCE_DIR} )
 
 install(TARGETS PositionBasedDynamics
         RUNTIME DESTINATION bin

@@ -5,7 +5,7 @@
 //  Created by claire qian on 2020/5/23.
 //  Copyright © 2020 claire qian. All rights reserved.
 //
-
+#include <GL/glew.h>
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
